@@ -141,7 +141,7 @@ a.custom-card:hover {
 }
 
 
-/*Galeria products*/
+/*-----------------------Galeria products-----------------------------*/
 
 .product-small-img img {
   width: 100% ;
@@ -420,48 +420,97 @@ input[type="radio"]{
   outline: none;
 
 }
+/*------------------------------------MY PERFIL-------------------------*/
+.formProfile{
+  margin: auto;
+  width: 840px;
+  height: 640px;
+  position: relative;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  margin-left: 300px;
+  background:rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(50vh -220px);
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  float: left;
 
-
-
-/*----------------------POPUP ENVIO------------------------*/
-.overlay{
-  background: rgba(0,0,0,.3);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  visibility: hidden;
 }
 
-.overlay.active{
-  visibility: visible;
-}
-
-.popup{
-  background: #f8f8f8;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
-  border-radius: 10px;
+.formProfile h2{
   text-align: center;
-  height: 650px;
-  display: block;
-  justify-content: center;
-  align-items: center;
+  font-size: 60px;
+  padding: 20px;
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+.formProfile input{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  transition: all .3s;
+  border-bottom: 2px solid grey;
+  text-align: center;
+  margin: auto;
+  
+}
+
+.formProfile button{
+  float: right;
+  padding: 8px 12px;
+  margin: 8px 0 0 ;
+  border: 2px solid gray;
+  background: 0;
+  color: #000;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+
+.formProfile2{
+  margin: auto;
+  width: 440px;
+  height: 640px;
+  position: relative;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  margin-right: 300px;
+  background:rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(50vh -220px);
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  float: right;
 
 }
 
-.popup .btn-cerrar-popup{
-  font-size: 16px;
-  line-height: 16px;
-  display: block;
-  text-align: right;
-  color: #BBBBBB;
-  transition: .3s ease all;
-  margin-right: 10px;
-  margin-top: 10px;
+.formProfile2 h2{
+  text-align: center;
+  font-size: 60px;
+  padding: 20px;
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+.cont-data span{
+  font-size: 25px;
+  text-align: center;
+}
+
+.cont-data p{
+  display: list-item;
+  list-style: none;
+  font-size: 20px;
 }
 
 

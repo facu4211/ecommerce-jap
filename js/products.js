@@ -50,23 +50,23 @@ function showProductList() {
             ((maxCount == undefined) || (maxCount != undefined && parseInt(product.cost) <= maxCount))) {
 
             //funcion que almacena todo el htmlContentToAppend
-            htmlContentToAppend += `
-        <a href="product-info.html" class="list-group-item list-group-item-action">
-            <div class="row">
-                <div class="col-3">
-                    <img src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
-                </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h4 class="mb-1">`+ product.name + `</h4>
-                        <small class="text-muted">` + product.soldCount + ` artículos</small>
-                        <small class="text-muted">` + product.currency + product.cost + `</small>
+            htmlContentToAppend += `  
+            <div class="col-6 list-group-item list-group-item-action">
+            <a href="product-info.html">    
+                    <div class="sm-4">
+                        <img src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
                     </div>
-                    <p class="mb-1">` + product.description + `</p>
+                    <div class="sm-4">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h4 class="sm-4">`+ product.name + `</h4>
+                            <small class="text-muted">` + product.soldCount + ` artículos</small>
+                            <small class="text-muted">` + product.currency + product.cost + `</small>
+                        </div>
+                        <p class="sm-4">` + product.description + `</p>
                 </div>
             </div>
-        </a>
-        `
+            </a>
+            `
         }
         //es necesario para poder mostrar todo en el html mediante el getElementById
         document.getElementById("prod-list-container").innerHTML = htmlContentToAppend;
@@ -117,23 +117,23 @@ document.addEventListener("DOMContentLoaded", function (e) {
         showProductList();
     });
 
-    document.getElementById("rangeFilterCount").addEventListener("click", function(){
+    document.getElementById("rangeFilterCount").addEventListener("click", function () {
         //A cada variable le seteo el valor de cada input
         minCount = document.getElementById("rangeFilterCostMin").value;
         maxCount = document.getElementById("rangeFilterCostMax").value;
 
         //si tiene un dato y ademas es distinto al valor predeterminado y ademas es mayor o igual a 0, paso el string a numero
-        if ((minCount != undefined) && (minCount != "") && (parseInt(minCount)) >= 0){
+        if ((minCount != undefined) && (minCount != "") && (parseInt(minCount)) >= 0) {
             minCount = parseInt(minCount);
         }
-        else{
+        else {
             minCount = undefined;
         }
 
-        if ((maxCount != undefined) && (maxCount != "") && (parseInt(maxCount)) >= 0){
+        if ((maxCount != undefined) && (maxCount != "") && (parseInt(maxCount)) >= 0) {
             maxCount = parseInt(maxCount);
         }
-        else{
+        else {
             maxCount = undefined;
         }
         //llamo a showProductList() para mostrar las listas ordenadas segun el criterio 

@@ -3,7 +3,6 @@
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function (e) {
 
-
     var btnAbrirPopup = document.getElementById("btn-abrir-popup"),
         overlay = document.getElementById("overlay"),
         popup = document.getElementById("popup"),
@@ -23,12 +22,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
 });
 
+
 //creo esta funcion para guardar el valor del input en localStorage 
-function guardarDatos(){
+function guardarDatos() {
     let nombre = document.getElementById("username").value;
+
     localStorage.setItem("user", nombre)
 }
-
 
 function validar() {
 
